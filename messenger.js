@@ -8,7 +8,7 @@ app.use (bodyParser.urlencoded ({extended: false}));
 
 app.use(bodyParser.json())
 
-app.listen(3210, function(){
+app.listen(process.env.PORT || 3210, function(){
     console.log("Server Listen in localhost:3210")
 })
 
