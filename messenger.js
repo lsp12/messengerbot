@@ -32,7 +32,9 @@ app.post("/webhook", function(req, res){
                 if(messagingEvent.message){
                     const senderId = messagingEvent.sender.id;
                     const messageText = messagingEvent.message.text;
-                    console.log(messagingEvent.message.attachments[0].payload.coordinates)
+                    if(messagingEvent && messagingEvent.message && messagingEvent.message.attachments.length > 0){
+                        console.log(messagingEvent.message.attachments[0].payload.coordinates)
+                    }
                     const messageResponseData = {
                         recipient: {
                             id: senderId
