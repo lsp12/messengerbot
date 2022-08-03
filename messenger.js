@@ -32,6 +32,8 @@ app.post("/webhook", function(req, res){
                 if(messagingEvent.message){
                     const senderId = messagingEvent.sender.id;
                     const messageText = messagingEvent.message.text;
+                    console.log(messagingEvent)
+                    console.log(messagingEvent.message)
                     const messageResponseData = {
                         recipient: {
                             id: senderId
