@@ -25,6 +25,35 @@ app.get("/webhook", function(req, res){
 })
 
 app.post("/webhook", function(req, res){
-    console.log(req.body, "este es el mensaje")
+    const data = req.body;
+    if(data.object === "page"){
+        data.entry.forEach(messagingEvent => {
+            if(messagingEvent.message){
+                const senderId = messagingEvent.sender.id;
+                const messageText = messagingEvent.message.text;
+                const messageResponseData = {
+                    recipient: {
+                        id: senderId
+                    },
+                    message: {
+                        text: "Solo se repetir el pinche mensaje alv"
+                    }
+                };
+
+                request({
+                    uri: "https://graph.facebook.com/v2.6/me/messages",
+                    qs: {access_token: process.env.APP_TOKEN},
+                    method: "POST",
+                    json: messageResponseData
+                }, function (error, response, data){
+                    if(error){
+                        console.log("No fue posible enviar el mensaje")
+                    }else{
+                        console.log("Mensaje enviado")
+                    }
+                })
+            }
+        });
+    }
     res.sendStatus (200);
 })
