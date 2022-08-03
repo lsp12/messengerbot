@@ -37,7 +37,7 @@ app.post("/webhook", function(req, res){
                             id: senderId
                         },
                         message: {
-                            text: "Solo se repetir el pinche mensaje alv"
+                            text: `Solo se repetir el mensaje: ${messageText}`
                         }
                     };
     
