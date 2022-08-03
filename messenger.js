@@ -17,16 +17,14 @@ app.get("/", function(req, res){
 })
 
 app.get("/webhook", function(req, res){
-    console.log(req.query, "hola")
     if(req.query['hub.verify_token'] === "hello_token"){
-        console.log(req.query)
         res.send(req.query["hub.challenge"])
     }else{
-    res.send("Prueba")
+        res.send("Prueba")
     }
 })
 
 app.post("/webhook", function(req, res){
-    console.log(req.body)
+    console.log(req.body, "este es el mensaje")
     res.sendStatus (200);
 })
