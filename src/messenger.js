@@ -228,7 +228,7 @@ app.post("/webhook", function (req, res) {
               id: senderId,
             },
             message: {
-              attachment: {
+              /* attachment: {
                 type: "template",
                 payload: {
                   template_type: "receipt",
@@ -284,7 +284,7 @@ app.post("/webhook", function (req, res) {
                     },
                   ],
                 },
-              },
+              }, */
               /* attachment: {
                 type: "template",
                 payload: {
@@ -373,7 +373,7 @@ app.post("/webhook", function (req, res) {
                 access_token: process.env.APP_TOKEN,
               },
               method: "POST",
-              json: messageResponseData,
+              json: messageResponse,
             },
             function (error, response, data) {
               if (error) {
