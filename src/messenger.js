@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import request from "request";
-import { quick_replies } from "./quick_replies";
+import { quick_replies } from "./quick_replies.js";
 
 var app = express();
 
