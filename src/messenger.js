@@ -30,7 +30,7 @@ app.post("/webhook", function (req, res) {
   if (data.object === "page") {
     data.entry.forEach((pageEntry) => {
       pageEntry.messaging.forEach((messagingEvent) => {
-        if (messagingEvent.message) {
+        if (messagingEvent.message.payload) {
           console.log(messagingEvent.message);
           const senderId = messagingEvent.sender.id;
           let messageText = messagingEvent.message.text;
