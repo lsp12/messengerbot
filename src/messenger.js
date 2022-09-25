@@ -35,6 +35,12 @@ app.post("/webhook", function (req, res) {
             console.log(messagingEvent);
             const senderId = messagingEvent.sender.id;
             const messageText = messagingEvent.message.text;
+            if (messagingEvent.attachment) {
+              messagingEvent.attachment.map((att) => {
+                console.log(att);
+              });
+            }
+
             /* if (
             messagingEvent &&
             messagingEvent.message &&
