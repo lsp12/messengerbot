@@ -35,9 +35,30 @@ app.post("/webhook", function (req, res) {
             console.log(messagingEvent);
             const senderId = messagingEvent.sender.id;
             const messageText = messagingEvent.message.text;
+            const messageResponseData = {
+              recipient: {
+                id: senderId,
+              },
+              message: {},
+            };
             if (messagingEvent.message.attachments) {
               messagingEvent.message.attachments.map((att) => {
                 console.log("Este es ---", att);
+                messageResponseData.message = {
+                  attachment: {
+                    type: "template",
+                    payload: {
+                      template_type: "media",
+                      elements: [
+                        {
+                          media_type: "image",
+                          url: att.url,
+                        },
+                      ],
+                    },
+                  },
+                };
+                res.send(200);
               });
             }
 
@@ -52,12 +73,7 @@ app.post("/webhook", function (req, res) {
             );
             messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`;
           } */
-            const messageResponseData = {
-              recipient: {
-                id: senderId,
-              },
-              message: {},
-            };
+
             switch (messageText.toLowerCase()) {
               case "texto":
                 messageResponseData.message = {
