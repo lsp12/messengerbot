@@ -51,7 +51,7 @@ app.post("/webhook", function (req, res) {
               id: senderId,
             },
             message: {
-              /* attachment: {
+              attachment: {
                 type: "template",
                 payload: {
                   template_type: "receipt",
@@ -107,8 +107,8 @@ app.post("/webhook", function (req, res) {
                     },
                   ],
                 },
-              }, */
-              attachment: {
+              },
+              /* attachment: {
                 type: "template",
                 payload: {
                   template_type: "generic",
@@ -161,7 +161,7 @@ app.post("/webhook", function (req, res) {
                     },
                   ],
                 },
-              },
+              }, */
               /* text: `Solo se repetir el mensaje: a`, */
               /* attachment: {
                 type: "image",
