@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import request from "request";
+/* import "./database.js"; */
 
 var app = express();
 
@@ -43,12 +44,20 @@ app.post("/webhook", function (req, res) {
             );
             messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`;
           }
+
           const messageResponseData = {
             recipient: {
               id: senderId,
             },
             message: {
               text: `Solo se repetir el mensaje: ${messageText}`,
+              attachment: {
+                type: "image",
+                payload: {
+                  url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                  is_reusable: true,
+                },
+              },
               quick_replies: [
                 {
                   content_type: "text",
