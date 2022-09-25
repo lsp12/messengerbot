@@ -73,7 +73,7 @@ app.post("/webhook", function (req, res) {
             );
             messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`;
           } */
-
+            console.log(messageText.toLowerCase());
             switch (messageText.toLowerCase()) {
               case "texto":
                 messageResponseData.message = {
