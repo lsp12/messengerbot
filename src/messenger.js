@@ -94,7 +94,7 @@ app.post("/webhook", function (req, res) {
                       price: 50,
                       currency: "USD",
                       image_url:
-                        "http://petersapparel.parseapp.com/img/whiteshirt.png",
+                        "https://i.blogs.es/30d986/cyberpunk-edgerunners/1366_2000.jpeg",
                     },
                     {
                       title: "Classic Gray T-Shirt",
@@ -103,7 +103,7 @@ app.post("/webhook", function (req, res) {
                       price: 25,
                       currency: "USD",
                       image_url:
-                        "http://petersapparel.parseapp.com/img/grayshirt.png",
+                        "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
                     },
                   ],
                 },
