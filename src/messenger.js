@@ -54,24 +54,68 @@ app.post("/webhook", function (req, res) {
               attachment: {
                 type: "template",
                 payload: {
-                  template_type: "generic",
+                  type: "vertical",
+                  tag: "generic",
                   elements: [
                     {
-                      title: "Welcome!",
-                      image_url:
-                        "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
-                      subtitle: "We have the right hat for everyone.",
-                      default_action: {},
-                      buttons: [
+                      type: "vertical",
+                      elements: [
                         {
-                          type: "web_url",
-                          url: "https://www.youtube.com/",
-                          title: "View Website",
+                          type: "image",
+                          url: "https://i.pinimg.com/736x/a0/67/5e/a0675e5161d7ae5be2550987f397a641--flower-shops-paper-flowers.jpg",
+                          tooltip: "Flowers",
                         },
                         {
-                          type: "postback",
-                          title: "Start Chatting",
-                          payload: "DEVELOPER_DEFINED_PAYLOAD",
+                          type: "text",
+                          tag: "title",
+                          text: "Birthday Bouquet",
+                          tooltip: "Title",
+                        },
+                        {
+                          type: "text",
+                          tag: "subtitle",
+                          text: "Wild flowers",
+                          tooltip: "subtitle",
+                        },
+                        {
+                          type: "button",
+                          tooltip: "publish text example",
+                          title: "publish text example",
+                          click: {
+                            actions: [
+                              {
+                                type: "publishText",
+                                text: "published text button tap",
+                              },
+                            ],
+                          },
+                        },
+                        {
+                          type: "button",
+                          tooltip: "URL button example",
+                          title: "URL button example",
+                          click: {
+                            actions: [
+                              {
+                                type: "link",
+                                name: "URL button tap",
+                                uri: "https://www.pinterest.com/lyndawhite/beautiful-flowers/",
+                              },
+                            ],
+                          },
+                        },
+                        {
+                          type: "button",
+                          title: "Navigate",
+                          click: {
+                            actions: [
+                              {
+                                type: "navigate",
+                                lo: 40.7562,
+                                la: -73.99861,
+                              },
+                            ],
+                          },
                         },
                       ],
                     },
