@@ -57,8 +57,10 @@ app.post("/webhook", function (req, res) {
               messageResponse.message = {
                 text: `Hola este es un texto`,
               };
+              console.log("texto");
               break;
             case "botones":
+              console.log("botones");
               messageResponse.message = {
                 attachment: {
                   type: "template",
@@ -78,6 +80,7 @@ app.post("/webhook", function (req, res) {
               break;
 
             case "imagenes":
+              console.log("imagenes");
               messageResponse.message = {
                 attachment: {
                   type: "image",
@@ -90,6 +93,7 @@ app.post("/webhook", function (req, res) {
               break;
 
             case "Checkout":
+              console.log("Checkout");
               messageResponse.message = {
                 attachment: {
                   type: "template",
@@ -152,6 +156,7 @@ app.post("/webhook", function (req, res) {
               break;
 
             case "empezar":
+              console.log("empezar");
               messageResponse.message = {
                 text: `Hola soy un bot`,
                 quick_replies: [
