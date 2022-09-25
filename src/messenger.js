@@ -54,17 +54,45 @@ app.post("/webhook", function (req, res) {
               attachment: {
                 type: "template",
                 payload: {
-                  template_type: "button",
-                  text: "What do you want to do next?",
-                  buttons: [
+                  template_type: "media",
+                  elements: [
                     {
-                      type: "web_url",
-                      url: "https://www.messenger.com/",
-                      title: "Visit Messenger",
+                      media_type: "image",
+                      url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                      buttons: [
+                        {
+                          type: "web_url",
+                          url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                          title: "View Website",
+                        },
+                      ],
+                    },
+                    {
+                      media_type: "image",
+                      url: "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
+                      buttons: [
+                        {
+                          type: "web_url",
+                          url: "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
+                          title: "View Website",
+                        },
+                      ],
+                    },
+                    {
+                      media_type: "image",
+                      url: "https://i.blogs.es/30d986/cyberpunk-edgerunners/1366_2000.jpeg",
+                      buttons: [
+                        {
+                          type: "web_url",
+                          url: "https://i.blogs.es/30d986/cyberpunk-edgerunners/1366_2000.jpeg",
+                          title: "View Website",
+                        },
+                      ],
                     },
                   ],
                 },
               },
+
               /* text: `Solo se repetir el mensaje: a`, */
               /* attachment: {
                 type: "image",
