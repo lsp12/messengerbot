@@ -51,14 +51,14 @@ app.post("/webhook", function (req, res) {
           };
           switch (messageText.toLowerCase()) {
             case "texto":
-              messageResponse.message = {
+              messageResponseData.message = {
                 text: "Hola este es un texto",
               };
               console.log("texto");
               break;
             case "botones":
               console.log("botones");
-              messageResponse.message = {
+              messageResponseData.message = {
                 attachment: {
                   type: "template",
                   payload: {
@@ -78,7 +78,7 @@ app.post("/webhook", function (req, res) {
 
             case "imagenes":
               console.log("imagenes");
-              messageResponse.message = {
+              messageResponseData.message = {
                 attachment: {
                   type: "image",
                   payload: {
@@ -91,7 +91,7 @@ app.post("/webhook", function (req, res) {
 
             case "Checkout":
               console.log("Checkout");
-              messageResponse.message = {
+              messageResponseData.message = {
                 attachment: {
                   type: "template",
                   payload: {
@@ -154,7 +154,7 @@ app.post("/webhook", function (req, res) {
 
             case "empezar":
               console.log("empezar");
-              messageResponse.message = {
+              messageResponseData.message = {
                 text: "Hola soy un bot",
                 quick_replies: [
                   {
@@ -190,7 +190,7 @@ app.post("/webhook", function (req, res) {
               break;
 
             default:
-              messageResponse.message = {
+              messageResponseData.message = {
                 text: "esto es lo que puedo hacer",
                 quick_replies: [
                   {
