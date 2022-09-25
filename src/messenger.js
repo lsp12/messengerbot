@@ -51,7 +51,7 @@ app.post("/webhook", function (req, res) {
             },
             message: {},
           };
-          console.log(messageText);
+          console.log(messageText, messagingEvent.message);
           switch (messageText.toLowerCase()) {
             case "texto":
               messageResponse.message = {
