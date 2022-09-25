@@ -189,6 +189,70 @@ app.post("/webhook", function (req, res) {
               };
               break;
 
+            case "carrusel":
+              console.log("carrusel");
+              messageResponseData.message = {
+                attachment: {
+                  type: "template",
+                  payload: {
+                    template_type: "generic",
+                    elements: [
+                      {
+                        title: "Welcome!",
+                        image_url:
+                          "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
+                        subtitle: "We have the right hat for everyone.",
+                        default_action: {
+                          type: "web_url",
+                          url: "https://petersfancybrownhats.com/view?item=103",
+                          messenger_extensions: false,
+                          webview_height_ratio: "tall",
+                          fallback_url: "https://petersfancybrownhats.com/",
+                        },
+                        buttons: [
+                          {
+                            type: "web_url",
+                            url: "https://petersfancybrownhats.com",
+                            title: "View Website",
+                          },
+                          {
+                            type: "postback",
+                            title: "Start Chatting",
+                            payload: "DEVELOPER_DEFINED_PAYLOAD",
+                          },
+                        ],
+                      },
+                      {
+                        title: "Welcome!",
+                        image_url:
+                          "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                        subtitle: "We have the right hat for everyone.",
+                        default_action: {
+                          type: "web_url",
+                          url: "https://petersfancybrownhats.com/view?item=103",
+                          messenger_extensions: false,
+                          webview_height_ratio: "tall",
+                          fallback_url: "https://petersfancybrownhats.com/",
+                        },
+                        buttons: [
+                          {
+                            type: "web_url",
+                            url: "https://petersfancybrownhats.com",
+                            title: "View Website",
+                          },
+                          {
+                            type: "postback",
+                            title: "Start Chatting",
+                            payload: "DEVELOPER_DEFINED_PAYLOAD",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                },
+              };
+              break;
+
             default:
               messageResponseData.message = {
                 text: "esto es lo que puedo hacer",
