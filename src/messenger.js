@@ -50,7 +50,7 @@ app.post("/webhook", function (req, res) {
               id: senderId,
             },
             message: {
-              text: `Solo se repetir el mensaje: ${messageText}`,
+              /* text: `Solo se repetir el mensaje: ${messageText}`, */
               attachment: {
                 type: "image",
                 payload: {
@@ -58,7 +58,7 @@ app.post("/webhook", function (req, res) {
                   is_reusable: true,
                 },
               },
-              quick_replies: [
+              /* quick_replies: [
                 {
                   content_type: "text",
                   title: "Red",
@@ -73,7 +73,7 @@ app.post("/webhook", function (req, res) {
                   image_url:
                     "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
                 },
-              ],
+              ], */
             },
           };
 
