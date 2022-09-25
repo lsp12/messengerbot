@@ -51,14 +51,47 @@ app.post("/webhook", function (req, res) {
               id: senderId,
             },
             message: {
-              /* text: `Solo se repetir el mensaje: ${messageText}`, */
               attachment: {
+                type: "template",
+                payload: {
+                  template_type: "generic",
+                  elements: [
+                    {
+                      title: "Welcome!",
+                      image_url:
+                        "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                      subtitle: "We have the right hat for everyone.",
+                      default_action: {
+                        type: "web_url",
+                        url: "https://petersfancybrownhats.com/view?item=103",
+                        messenger_extensions: false,
+                        webview_height_ratio: "tall",
+                        fallback_url: "https://petersfancybrownhats.com/",
+                      },
+                      buttons: [
+                        {
+                          type: "web_url",
+                          url: "https://petersfancybrownhats.com",
+                          title: "View Website",
+                        },
+                        {
+                          type: "postback",
+                          title: "Start Chatting",
+                          payload: "DEVELOPER_DEFINED_PAYLOAD",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              },
+              /* text: `Solo se repetir el mensaje: ${messageText}`, */
+              /* attachment: {
                 type: "image",
                 payload: {
                   url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
                   is_reusable: true,
                 },
-              },
+              }, */
               /* quick_replies: [
                 {
                   content_type: "text",
