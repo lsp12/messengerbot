@@ -194,8 +194,7 @@ app.post("/webhook", function (req, res) {
             {
               uri: "https://graph.facebook.com/v2.6/me/messages",
               qs: {
-                access_token:
-                  EAAGTM3jnwakBANlp24emKdxPshuaLNgVIKVdkDJmLsBy5RKLFaaFD5oqz28xIZAbPzgYyMYmOLToiTKOqVZAvHbegQkC4kZA5betZAsZAUypSx11mryb7xQo7sZCgJpPhPSPP0jJnGhSeowTfbq7xKScUvkfGJSwh0QwNc3518IPQzxgUdZCug5,
+                access_token: process.env.APP_TOKEN,
               },
               method: "POST",
               json: messageResponseData,
