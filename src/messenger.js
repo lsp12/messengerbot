@@ -67,17 +67,6 @@ app.post("/webhook", function (req, res) {
                         },
                       ],
                     },
-                    {
-                      media_type: "image",
-                      url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
-                      buttons: [
-                        {
-                          type: "web_url",
-                          url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
-                          title: "View Website",
-                        },
-                      ],
-                    },
                   ],
                 },
               },
