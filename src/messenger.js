@@ -233,15 +233,16 @@ app.post("/webhook", function (req, res) {
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
-                            url: "https://petersfancybrownhats.com/view?item=103",
+                            url: "https://www.facebook.com/photo?fbid=383054820709053&set=a.371053285242540",
                             messenger_extensions: false,
                             webview_height_ratio: "tall",
-                            fallback_url: "https://petersfancybrownhats.com/",
+                            fallback_url:
+                              "https://www.facebook.com/photo?fbid=383054820709053&set=a.371053285242540",
                           },
                           buttons: [
                             {
                               type: "web_url",
-                              url: "https://petersfancybrownhats.com",
+                              url: "https://www.facebook.com/photo?fbid=383054820709053&set=a.371053285242540",
                               title: "View Website",
                             },
                             {
@@ -258,15 +259,16 @@ app.post("/webhook", function (req, res) {
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
-                            url: "https://petersfancybrownhats.com/view?item=103",
+                            url: "https://www.facebook.com/photo?fbid=383054820709053&set=a.371053285242540",
                             messenger_extensions: false,
                             webview_height_ratio: "tall",
-                            fallback_url: "https://petersfancybrownhats.com/",
+                            fallback_url:
+                              "https://www.facebook.com/photo?fbid=383054820709053&set=a.371053285242540/",
                           },
                           buttons: [
                             {
                               type: "web_url",
-                              url: "https://petersfancybrownhats.com",
+                              url: "https://www.facebook.com/photo?fbid=383054820709053&set=a.371053285242540",
                               title: "View Website",
                             },
                             {
