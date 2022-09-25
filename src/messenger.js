@@ -62,7 +62,7 @@ app.post("/webhook", function (req, res) {
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                          url: "https://www.google.com/",
                           title: "View Website",
                         },
                       ],
@@ -73,7 +73,7 @@ app.post("/webhook", function (req, res) {
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
+                          url: "https://www.google.com/",
                           title: "View Website",
                         },
                       ],
@@ -84,7 +84,7 @@ app.post("/webhook", function (req, res) {
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://i.blogs.es/30d986/cyberpunk-edgerunners/1366_2000.jpeg",
+                          url: "https://www.google.com/",
                           title: "View Website",
                         },
                       ],
@@ -131,7 +131,10 @@ app.post("/webhook", function (req, res) {
               if (error) {
                 console.log("No fue posible enviar el mensaje");
               } else {
-                console.log("Mensaje enviado", error, response);
+                console.log("Mensaje enviado");
+                console.log(response);
+                console.log(data);
+                console.log(error);
               }
             }
           );
