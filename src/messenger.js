@@ -86,7 +86,7 @@ app.post("/webhook", function (req, res) {
                     type: "image",
                     payload: {
                       url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
-                      is_reusable: true,
+                      is_reusable: false,
                     },
                   },
                 };
