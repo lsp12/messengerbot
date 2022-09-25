@@ -27,6 +27,7 @@ app.get("/webhook", function (req, res) {
 app.post("/webhook", function (req, res) {
   const data = req.body;
   if (data.object === "page") {
+    console.log(data);
     data.entry.forEach((pageEntry) => {
       pageEntry.messaging.forEach((messagingEvent) => {
         if (messagingEvent.message) {
@@ -308,6 +309,8 @@ app.post("/webhook", function (req, res) {
         }
       });
     });
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(404);
   }
-  res.sendStatus(200);
 });
