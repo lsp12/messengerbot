@@ -118,7 +118,7 @@ app.post("/webhook", function (req, res) {
                 };
                 break;
 
-              case "Checkout":
+              case "checkout":
                 console.log("Checkout");
                 messageResponseData.message = {
                   attachment: {
@@ -310,6 +310,13 @@ app.post("/webhook", function (req, res) {
                     {
                       content_type: "text",
                       title: "botones",
+                      payload: "<POSTBACK_PAYLOAD>",
+                      image_url:
+                        "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
+                    },
+                    {
+                      content_type: "text",
+                      title: "checkout",
                       payload: "<POSTBACK_PAYLOAD>",
                       image_url:
                         "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
