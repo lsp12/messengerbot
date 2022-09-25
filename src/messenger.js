@@ -51,19 +51,21 @@ app.post("/webhook", function (req, res) {
               id: senderId,
             },
             message: {
-              /*  type: "survey",
-              question: "What would you like to do?",
-              msgid: "3er45",
-              options: [
-                "Eat",
-                "Drink",
-                {
-                  type: "url",
-                  title: "View website",
-                  url: "www.gupshup.io",
-                },
-              ], */
-              text: `Solo se repetir el mensaje: a`,
+              attachment: {
+                type: "survey",
+                question: "What would you like to do?",
+                msgid: "3er45",
+                options: [
+                  "Eat",
+                  "Drink",
+                  {
+                    type: "url",
+                    title: "View website",
+                    url: "www.gupshup.io",
+                  },
+                ],
+              },
+              /* text: `Solo se repetir el mensaje: a`, */
               /* attachment: {
                 type: "image",
                 payload: {
