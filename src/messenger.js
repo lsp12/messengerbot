@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import request from "request";
+import { quick_replies } from "./quick_replies";
 
 var app = express();
 
@@ -54,6 +55,7 @@ app.post("/webhook", function (req, res) {
             case "texto":
               messageResponseData.message = {
                 text: "Hola este es un texto",
+                quick_replies: quick_replies,
               };
               console.log("texto");
               break;
@@ -74,6 +76,7 @@ app.post("/webhook", function (req, res) {
                     ],
                   },
                 },
+                quick_replies: quick_replies,
               };
               break;
 
@@ -87,6 +90,7 @@ app.post("/webhook", function (req, res) {
                     is_reusable: true,
                   },
                 },
+                quick_replies: quick_replies,
               };
               break;
 
@@ -157,72 +161,14 @@ app.post("/webhook", function (req, res) {
               console.log("empezar");
               messageResponseData.message = {
                 text: "Hola soy un bot",
-                quick_replies: [
-                  {
-                    content_type: "text",
-                    title: "imagenes",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
-                  },
-                  {
-                    content_type: "text",
-                    title: "carrusel",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
-                  },
-                  {
-                    content_type: "text",
-                    title: "texto",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
-                  },
-                  {
-                    content_type: "text",
-                    title: "botones",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
-                  },
-                ],
+                quick_replies: quick_replies,
               };
               break;
 
             default:
               messageResponseData.message = {
                 text: "esto es lo que puedo hacer",
-                quick_replies: [
-                  {
-                    content_type: "text",
-                    title: "imagenes",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
-                  },
-                  {
-                    content_type: "text",
-                    title: "carrusel",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
-                  },
-                  {
-                    content_type: "text",
-                    title: "texto",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
-                  },
-                  {
-                    content_type: "text",
-                    title: "botones",
-                    payload: "<POSTBACK_PAYLOAD>",
-                    image_url:
-                      "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
-                  },
-                ],
+                quick_replies: quick_replies,
               };
               break;
           }
