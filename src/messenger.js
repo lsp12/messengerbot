@@ -58,7 +58,7 @@ app.post("/webhook", function (req, res) {
                   elements: [
                     {
                       media_type: "image",
-                      url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                      url: "https://scontent.fgye1-2.fna.fbcdn.net/v/t39.30808-6/308928362_620241309750206_6506868414479100338_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=UVa9_r-2CJoAX-9YlQb&_nc_ht=scontent.fgye1-2.fna&oh=00_AT9mnY0TUq_NqVcsHcx2Vs38I0R2wzo0olRqMdlR0VPWFg&oe=6335BFA7",
                       buttons: [
                         {
                           type: "web_url",
@@ -73,18 +73,18 @@ app.post("/webhook", function (req, res) {
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://www.google.com/",
+                          url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
                           title: "View Website",
                         },
                       ],
                     },
                     {
                       media_type: "image",
-                      url: "https://i.blogs.es/30d986/cyberpunk-edgerunners/1366_2000.jpeg",
+                      url: "https://scontent.fgye1-2.fna.fbcdn.net/v/t39.30808-6/308928362_620241309750206_6506868414479100338_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=UVa9_r-2CJoAX-9YlQb&_nc_ht=scontent.fgye1-2.fna&oh=00_AT9mnY0TUq_NqVcsHcx2Vs38I0R2wzo0olRqMdlR0VPWFg&oe=6335BFA7",
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://www.google.com/",
+                          url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
                           title: "View Website",
                         },
                       ],
