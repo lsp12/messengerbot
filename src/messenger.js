@@ -131,7 +131,7 @@ app.post("/webhook", function (req, res) {
               if (error) {
                 console.log("No fue posible enviar el mensaje");
               } else {
-                console.log("Mensaje enviado");
+                console.log("Mensaje enviado", error, response);
               }
             }
           );
