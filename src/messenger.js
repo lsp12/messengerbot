@@ -63,15 +63,15 @@ app.post("/webhook", function (req, res) {
                       subtitle: "We have the right hat for everyone.",
                       default_action: {
                         type: "web_url",
-                        url: "https://petersfancybrownhats.com/view?item=103",
+                        url: "https://www.youtube.com/",
                         messenger_extensions: false,
                         webview_height_ratio: "tall",
-                        fallback_url: "https://petersfancybrownhats.com/",
+                        fallback_url: "https://www.youtube.com/",
                       },
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://petersfancybrownhats.com/",
+                          url: "https://www.youtube.com/",
                           title: "View Website",
                         },
                         {
