@@ -245,11 +245,6 @@ app.post("/webhook", function (req, res) {
                               url: "https://www.facebook.com/elcomerciocom",
                               title: "View Website",
                             },
-                            {
-                              type: "postback",
-                              title: "Start Chatting",
-                              payload: "DEVELOPER_DEFINED_PAYLOAD",
-                            },
                           ],
                         },
                         {
@@ -270,11 +265,6 @@ app.post("/webhook", function (req, res) {
                               type: "web_url",
                               url: "https://www.facebook.com/elcomerciocom",
                               title: "View Website",
-                            },
-                            {
-                              type: "postback",
-                              title: "Start Chatting",
-                              payload: "DEVELOPER_DEFINED_PAYLOAD",
                             },
                           ],
                         },
