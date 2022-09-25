@@ -54,8 +54,15 @@ app.post("/webhook", function (req, res) {
               attachment: {
                 type: "template",
                 payload: {
-                  type: "poll",
-                  question: "Do you like ice-cream?",
+                  template_type: "button",
+                  text: "What do you want to do next?",
+                  buttons: [
+                    {
+                      type: "web_url",
+                      url: "https://www.messenger.com/",
+                      title: "Visit Messenger",
+                    },
+                  ],
                 },
               },
               /* text: `Solo se repetir el mensaje: a`, */
