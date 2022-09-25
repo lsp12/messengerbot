@@ -7,18 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/messenger.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CrisLDev/messengerbot.git"
-  },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CrisLDev/messengerbot/issues"
-  },
-  "homepage": "https://github.com/CrisLDev/messengerbot#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
