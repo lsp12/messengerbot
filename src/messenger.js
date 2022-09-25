@@ -42,7 +42,8 @@ app.post("/webhook", function (req, res) {
             console.log(
               messagingEvent.message.attachments[0].payload.coordinates
             );
-            messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`;
+            //cordenadas
+            /* messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`; */
           }
 
           const messageResponseData = {
