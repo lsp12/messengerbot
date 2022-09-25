@@ -52,18 +52,37 @@ app.post("/webhook", function (req, res) {
             },
             message: {
               attachment: {
-                type: "survey",
-                question: "What would you like to do?",
-                msgid: "3er45",
-                options: [
-                  "Eat",
-                  "Drink",
-                  {
-                    type: "url",
-                    title: "View website",
-                    url: "www.gupshup.io",
+                type: "template",
+                payload: {
+                  template_type: "customer_feedback",
+                  title: "Rate your experience with Original Coast Clothing.", // Business needs to define.
+                  subtitle:
+                    "Let Original Coast Clothing know how they are doing by answering two questions", // Business needs to define.
+                  button_title: "Rate Experience", // Business needs to define.
+                  feedback_screens: [
+                    {
+                      questions: [
+                        {
+                          id: "hauydmns8", // Unique id for question that business sets
+                          type: "csat",
+                          title:
+                            "How would you rate your experience with Original Coast Clothing?", // Optional. If business does not define, we show standard text. Standard text based on question type ("csat", "nps", "ces" >>> "text")
+                          score_label: "neg_pos", // Optional
+                          score_option: "five_stars", // Optional
+                          // Optional. Inherits the title and id from the previous question on the same page.  Only free-from input is allowed. No other title will show.
+                          follow_up: {
+                            type: "free_form",
+                            placeholder: "Give additional feedback", // Optional
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                  business_privacy: {
+                    url: "https://www.example.com/",
                   },
-                ],
+                  expires_in_days: 3, // Optional, default 1 day, business defines 1-7 days
+                },
               },
               /* text: `Solo se repetir el mensaje: a`, */
               /* attachment: {
