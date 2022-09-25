@@ -54,13 +54,15 @@ app.post("/webhook", function (req, res) {
                   content_type: "text",
                   title: "Red",
                   payload: "<POSTBACK_PAYLOAD>",
-                  image_url: "http://example.com/img/red.png",
+                  image_url:
+                    "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
                 },
                 {
                   content_type: "text",
                   title: "Green",
                   payload: "<POSTBACK_PAYLOAD>",
-                  image_url: "http://example.com/img/green.png",
+                  image_url:
+                    "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
                 },
               ],
             },
