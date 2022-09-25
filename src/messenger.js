@@ -86,13 +86,13 @@ app.post("/webhook", function (req, res) {
                       subtitle: "We have the right hat for everyone.",
                       default_action: {
                         type: "web_url",
-                        url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
+                        url: "https://extrajaen.com/universidad/un-bot-ayudara-a-adolescentes-a-hablar-de-sus-emociones",
                         webview_height_ratio: "tall",
                       },
                       buttons: [
                         {
                           type: "web_url",
-                          url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
+                          url: "https://extrajaen.com/universidad/un-bot-ayudara-a-adolescentes-a-hablar-de-sus-emociones",
                           title: "View Website",
                         },
                         {
