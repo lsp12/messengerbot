@@ -78,15 +78,19 @@ app.post("/webhook", function (req, res) {
                   },
                 };
                 break;
-
               case "imagenes":
                 console.log("imagenes");
                 messageResponseData.message = {
                   attachment: {
-                    type: "image",
+                    type: "template",
                     payload: {
-                      url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
-                      is_reusable: false,
+                      template_type: "media",
+                      elements: [
+                        {
+                          media_type: "image",
+                          url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                        },
+                      ],
                     },
                   },
                 };
