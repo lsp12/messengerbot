@@ -32,7 +32,7 @@ app.post("/webhook", function (req, res) {
         if (messagingEvent.message) {
           const senderId = messagingEvent.sender.id;
           const messageText = messagingEvent.message.text;
-          if (
+          /* if (
             messagingEvent &&
             messagingEvent.message &&
             messagingEvent.message.attachments &&
@@ -41,8 +41,8 @@ app.post("/webhook", function (req, res) {
             console.log(
               messagingEvent.message.attachments[0].payload.coordinates
             );
-            /* messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`; */
-          }
+            messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`;
+          } */
           const messageResponseData = {
             recipient: {
               id: senderId,
