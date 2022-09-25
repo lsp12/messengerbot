@@ -61,13 +61,7 @@ app.post("/webhook", function (req, res) {
                       image_url:
                         "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
                       subtitle: "We have the right hat for everyone.",
-                      default_action: {
-                        type: "web_url",
-                        url: "https://www.youtube.com/",
-                        messenger_extensions: false,
-                        webview_height_ratio: "tall",
-                        fallback_url: "https://www.youtube.com/",
-                      },
+                      default_action: {},
                       buttons: [
                         {
                           type: "web_url",
