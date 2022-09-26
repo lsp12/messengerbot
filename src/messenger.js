@@ -113,7 +113,7 @@ app.post("/webhook", function (req, res) {
                       template_type: "media",
                       elements: [
                         {
-                          media_type: "image",
+                          media_type: "<image>",
                           url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
                         },
                       ],
