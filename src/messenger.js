@@ -41,41 +41,6 @@ app.post("/webhook", function (req, res) {
               },
               message: {},
             };
-            if (messagingEvent.message.attachments) {
-              messagingEvent.message.attachments.map((att) => {
-                console.log("Este es ---", att);
-                messageResponseData.message = {
-                  attachment: {
-                    type: "template",
-                    payload: {
-                      template_type: "media",
-                      elements: [
-                        {
-                          media_type: "image",
-                          url: att.url,
-                        },
-                      ],
-                    },
-                  },
-                };
-                request(
-                  {
-                    uri: "https://graph.facebook.com/v2.6/me/messages",
-                    qs: { access_token: process.env.APP_TOKEN },
-                    method: "POST",
-                    json: messageResponseData,
-                  },
-                  function (error, response, data) {
-                    if (error) {
-                      console.log("No fue posible enviar el mensaje");
-                    } else {
-                      console.log("Mensaje enviado");
-                    }
-                  }
-                );
-                res.send(200);
-              });
-            }
 
             console.log(messageText.toLowerCase());
             switch (messageText.toLowerCase()) {
