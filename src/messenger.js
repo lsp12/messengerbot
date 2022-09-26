@@ -58,21 +58,25 @@ app.post("/webhook", function (req, res) {
                     },
                   },
                 };
+                request(
+                  {
+                    uri: "https://graph.facebook.com/v2.6/me/messages",
+                    qs: { access_token: process.env.APP_TOKEN },
+                    method: "POST",
+                    json: messageResponseData,
+                  },
+                  function (error, response, data) {
+                    if (error) {
+                      console.log("No fue posible enviar el mensaje");
+                    } else {
+                      console.log("Mensaje enviado");
+                    }
+                  }
+                );
                 res.send(200);
               });
             }
 
-            /* if (
-            messagingEvent &&
-            messagingEvent.message &&
-            messagingEvent.message.attachments &&
-            messagingEvent.message.attachments.length > 0
-          ) {
-            console.log(
-              messagingEvent.message.attachments[0].payload.coordinates
-            );
-            messageText = `Latitud: ${messagingEvent.message.attachments[0].payload.coordinates.lat}, Longitud: ${messagingEvent.message.attachments[0].payload.coordinates.long}`;
-          } */
             console.log(messageText.toLowerCase());
             switch (messageText.toLowerCase()) {
               case "texto":
