@@ -233,7 +233,7 @@ app.post("/webhook", function (req, res) {
                         {
                           title: "Welcome!",
                           image_url:
-                            "https://i.pinimg.com/564x/f6/e1/90/f6e190ba3a2c8646e634908ba2e1443d.jpg",
+                            "https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/309052269_3395809013989928_6046073863166350220_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=VfbAfaSOMpIAX_HQFmP&_nc_ht=scontent.fgye1-1.fna&oh=00_AT_DO8s06vnjR6Xc3dsM_ICMEKAche3hOROAiWc3iEfMfQ&oe=63363583",
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
@@ -254,7 +254,7 @@ app.post("/webhook", function (req, res) {
                         {
                           title: "Welcome!",
                           image_url:
-                            "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                            "https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/305761822_421072490097335_1923850160291837366_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=HjBMzm5yqc4AX9x2_SA&_nc_oc=AQkhZlqoW4-0nAjVNb72FJhglPpZ--pn277AOqq-Qv4zwypxAecgYR6kd7s6D0WfJcx4J1DoL1CaILlOcSn065X2&_nc_ht=scontent.fgye1-1.fna&oh=00_AT_6_CpWuimrF_IW6SRtYdDpgiIwsDYzBesLJPx5FO2SIA&oe=6336BCE7",
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
