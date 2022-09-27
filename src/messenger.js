@@ -110,7 +110,7 @@ app.post("/webhook", function (req, res) {
                   attachment: {
                     type: "image",
                     payload: {
-                      url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                      url: "https://incoming.xfiv.chat/s3_upload/share_dir/1664237386994-Captura%20desde%202022-09-23%2017-17-30.png",
                       is_reusable: true,
                     },
                   },
