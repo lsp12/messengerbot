@@ -223,30 +223,27 @@ app.post("/webhook", function (req, res) {
                   attachment: {
                     type: "template",
                     payload: {
-                      template_type: "generic",
+                      template_type: "media",
                       elements: [
                         {
-                          title: "Welcome!",
-                          image_url:
-                            "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
-                          subtitle: "We have the right hat for everyone.",
-                          default_action: {
-                            type: "web_url",
-                            url: "https://petersfancybrownhats.com/view?item=103",
-                            messenger_extensions: false,
-                            webview_height_ratio: "tall",
-                            fallback_url: "https://petersfancybrownhats.com/",
-                          },
+                          media_type: "image",
+                          url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
                           buttons: [
                             {
                               type: "web_url",
-                              url: "https://petersfancybrownhats.com/",
+                              url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
                               title: "View Website",
                             },
+                          ],
+                        },
+                        {
+                          media_type: "image",
+                          url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
+                          buttons: [
                             {
-                              type: "postback",
-                              title: "Start Chatting",
-                              payload: "DEVELOPER_DEFINED_PAYLOAD",
+                              type: "web_url",
+                              url: "https://www.facebook.com/photo/?fbid=620241313083539&set=a.356785789429094",
+                              title: "View Website",
                             },
                           ],
                         },
