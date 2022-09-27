@@ -254,7 +254,7 @@ app.post("/webhook", function (req, res) {
                         {
                           title: "Welcome!",
                           image_url:
-                            "https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/309324258_1989353634609320_6196789678987991500_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=0c6GDEst1NIAX8MfRNb&_nc_ht=scontent.fgye1-1.fna&oh=00_AT8WaJ_Fs9xP5-DluBz1TgT58Q5xlmuvqROliFUZk03yzw&oe=6336EB99",
+                            "https://incoming.xfiv.chat/s3_upload/share_dir/1664237386994-Captura desde 2022-09-23 17-17-30.png",
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
