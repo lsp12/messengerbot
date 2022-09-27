@@ -228,7 +228,7 @@ app.post("/webhook", function (req, res) {
                         {
                           title: "Welcome!",
                           image_url:
-                            "https://scontent.fgye1-2.fna.fbcdn.net/v/t39.30808-6/308928362_620241309750206_6506868414479100338_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=UVa9_r-2CJoAX-9YlQb&_nc_ht=scontent.fgye1-2.fna&oh=00_AT9mnY0TUq_NqVcsHcx2Vs38I0R2wzo0olRqMdlR0VPWFg&oe=6335BFA7",
+                            "https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/309318465_6212288345461542_6075003679850083380_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=730e14&_nc_ohc=ejPR7HEvOJ4AX-a-wtI&_nc_ht=scontent.fgye1-1.fna&oh=00_AT9G1PICn5LG1yCcI6cUdIw-o9_tL1Gbk35WeEtXybRRSg&oe=63370B75",
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
