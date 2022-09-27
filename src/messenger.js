@@ -108,15 +108,10 @@ app.post("/webhook", function (req, res) {
                 console.log("imagenes");
                 messageResponseData.message = {
                   attachment: {
-                    type: "template",
+                    type: "image",
                     payload: {
-                      template_type: "media",
-                      elements: [
-                        {
-                          media_type: "image",
-                          url: "https://incoming.xfiv.chat/s3_upload/share_dir/1664237386994-Captura desde 2022-09-23 17-17-30.png",
-                        },
-                      ],
+                      url: "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
+                      is_reusable: true,
                     },
                   },
                 };
@@ -233,42 +228,25 @@ app.post("/webhook", function (req, res) {
                         {
                           title: "Welcome!",
                           image_url:
-                            "https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/309052269_3395809013989928_6046073863166350220_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=VfbAfaSOMpIAX_HQFmP&_nc_ht=scontent.fgye1-1.fna&oh=00_AT_DO8s06vnjR6Xc3dsM_ICMEKAche3hOROAiWc3iEfMfQ&oe=63363583",
+                            "https://assets.puzzlefactory.pl/puzzle/316/243/original.jpg",
                           subtitle: "We have the right hat for everyone.",
                           default_action: {
                             type: "web_url",
-                            url: "https://www.facebook.com/elcomerciocom",
+                            url: "https://petersfancybrownhats.com/view?item=103",
                             messenger_extensions: false,
                             webview_height_ratio: "tall",
-                            fallback_url:
-                              "https://www.facebook.com/elcomerciocom",
+                            fallback_url: "https://petersfancybrownhats.com/",
                           },
                           buttons: [
                             {
                               type: "web_url",
-                              url: "https://www.facebook.com/elcomerciocom",
+                              url: "https://petersfancybrownhats.com/",
                               title: "View Website",
                             },
-                          ],
-                        },
-                        {
-                          title: "Welcome!",
-                          image_url:
-                            "https://incoming.xfiv.chat/s3_upload/share_dir/1664237386994-Captura desde 2022-09-23 17-17-30.png",
-                          subtitle: "We have the right hat for everyone.",
-                          default_action: {
-                            type: "web_url",
-                            url: "https://www.facebook.com/elcomerciocom",
-                            messenger_extensions: false,
-                            webview_height_ratio: "tall",
-                            fallback_url:
-                              "https://www.facebook.com/elcomerciocom",
-                          },
-                          buttons: [
                             {
-                              type: "web_url",
-                              url: "https://www.facebook.com/elcomerciocom",
-                              title: "View Website",
+                              type: "postback",
+                              title: "Start Chatting",
+                              payload: "DEVELOPER_DEFINED_PAYLOAD",
                             },
                           ],
                         },
