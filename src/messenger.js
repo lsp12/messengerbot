@@ -324,7 +324,7 @@ app.post("/webhook", function (req, res) {
 
             request(
               {
-                uri: "https://graph.facebook.com/v14.0/me/messages",
+                uri: "https://graph.facebook.com/v15.0/me/messages",
                 qs: { access_token: process.env.APP_TOKEN },
                 method: "POST",
                 json: messageResponseData,
