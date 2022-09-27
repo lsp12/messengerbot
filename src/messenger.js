@@ -114,7 +114,7 @@ app.post("/webhook", function (req, res) {
                       elements: [
                         {
                           media_type: "image",
-                          url: "https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/309052269_3395809013989928_6046073863166350220_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=VfbAfaSOMpIAX_HQFmP&_nc_ht=scontent.fgye1-1.fna&oh=00_AT_DO8s06vnjR6Xc3dsM_ICMEKAche3hOROAiWc3iEfMfQ&oe=63363583",
+                          url: "https://incoming.xfiv.chat/s3_upload/share_dir/1664237386994-Captura desde 2022-09-23 17-17-30.png",
                         },
                       ],
                     },
